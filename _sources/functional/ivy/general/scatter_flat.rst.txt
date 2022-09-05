@@ -2,6 +2,10 @@ scatter_flat
 ============
 
 .. autofunction:: ivy.functional.ivy.general.scatter_flat
+
+.. autofunction:: ivy.container.container_methods.static_scatter_flat
+
+.. autofunction:: ivy.container.container_methods.scatter_flat
 |
 | **Supported Frameworks:**
 

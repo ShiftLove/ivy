@@ -2,6 +2,10 @@ is_ivy_container
 ================
 
 .. autofunction:: ivy.functional.ivy.general.is_ivy_container
+
+.. autofunction:: ivy.container.container_methods.is_ivy_container
+
+.. autofunction:: ivy.container.container_methods.static_is_ivy_container
 |
 | **Supported Frameworks:**
 

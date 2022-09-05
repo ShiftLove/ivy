@@ -2,6 +2,8 @@ cumsum
 ======
 
 .. autofunction:: ivy.functional.ivy.general.cumsum
+
+.. autofunction:: ivy.container.container_methods.static_cumsum
 |
 | **Supported Frameworks:**
 
