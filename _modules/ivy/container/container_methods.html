@@ -10192,11 +10192,11 @@
 <span class="sd">    key_chains</span>
 <span class="sd">        The key-chains to apply or not apply the method to. Default is None.</span>
 <span class="sd">    to_apply</span>
-<span class="sd">        If True, the method will be applied to key_chains, otherwise key_chains</span>
-<span class="sd">        will be skipped. Default is True.</span>
+<span class="sd">        If True, the method will be applied to key_chains, otherwise key_chains will</span>
+<span class="sd">        be skipped. Default is True.</span>
 <span class="sd">    prune_unapplied</span>
-<span class="sd">        Whether to prune key_chains for which the function was not applied.</span>
-<span class="sd">        Default is False.</span>
+<span class="sd">        Whether to prune key_chains for which the function was not applied. Default</span>
+<span class="sd">        is False.</span>
 <span class="sd">    map_sequences</span>
 <span class="sd">        Whether to also map method to sequences (lists, tuples). Default is False.</span>
 
@@ -11504,16 +11504,17 @@
 <span class="sd">    key_chains</span>
 <span class="sd">        The key-chains to apply or not apply the method to. Default is None.</span>
 <span class="sd">    to_apply</span>
-<span class="sd">        If True, the method will be applied to key_chains, otherwise key_chains</span>
-<span class="sd">        will be skipped. Default is True.</span>
+<span class="sd">        If True, the method will be applied to key_chains, otherwise key_chains will</span>
+<span class="sd">        be skipped. Default is True.</span>
 <span class="sd">    prune_unapplied</span>
-<span class="sd">        Whether to prune key_chains for which the function was not applied.</span>
-<span class="sd">        Default is False.</span>
+<span class="sd">        Whether to prune key_chains for which the function was not applied. Default</span>
+<span class="sd">        is False.</span>
 <span class="sd">    map_sequences</span>
 <span class="sd">        Whether to also map method to sequences (lists, tuples). Default is False.</span>
-<span class="sd">    out</span>
-<span class="sd">        optional output container, for writing the result to. It must have a</span>
-<span class="sd">        shape that the inputs broadcast to.</span>
+<span class="sd">    axes_lengths</span>
+<span class="sd">        Any additional specifications for dimensions.</span>
+<span class="sd">    **axes_lengths</span>
+
 
 <span class="sd">    Returns</span>
 <span class="sd">    -------</span>
@@ -11662,80 +11663,6 @@
     <span class="k">pass</span></div>
 
 
-<div class="viewcode-block" id="static_to_scalar"><a class="viewcode-back" href="../../../functional/ivy/general/to_scalar/static_to_scalar_container.html#ivy.container.container_methods.static_to_scalar">[docs]</a><span class="k">def</span> <span class="nf">static_to_scalar</span><span class="p">(</span>
-    <span class="n">x</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">ivy</span><span class="o">.</span><span class="n">Array</span><span class="p">,</span> <span class="n">ivy</span><span class="o">.</span><span class="n">NativeArray</span><span class="p">,</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Container</span><span class="p">],</span>
-    <span class="o">/</span><span class="p">,</span>
-    <span class="n">key_chains</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-    <span class="n">to_apply</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-    <span class="n">prune_unapplied</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
-    <span class="n">map_sequences</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
-<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Container</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    ivy.Container static method variant of ivy.to_scalar. This method simply wraps</span>
-<span class="sd">    the function, and so the docstring for ivy.to_scalar also applies to this method</span>
-<span class="sd">    with minimal changes.</span>
-
-<span class="sd">    Parameters</span>
-<span class="sd">    ----------</span>
-<span class="sd">    x</span>
-<span class="sd">        input container.</span>
-<span class="sd">    key_chains</span>
-<span class="sd">        The key-chains to apply or not apply the method to. Default is None.</span>
-<span class="sd">    to_apply</span>
-<span class="sd">        If True, the method will be applied to key_chains, otherwise key_chains</span>
-<span class="sd">        will be skipped. Default is True.</span>
-<span class="sd">    prune_unapplied</span>
-<span class="sd">        Whether to prune key_chains for which the function was not applied.</span>
-<span class="sd">        Default is False.</span>
-<span class="sd">    map_sequences</span>
-<span class="sd">        Whether to also map method to sequences (lists, tuples). Default is False.</span>
-
-<span class="sd">    Returns</span>
-<span class="sd">    -------</span>
-<span class="sd">    ret</span>
-<span class="sd">        a container of scalars copying the element of the array ``x``.</span>
-
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">pass</span></div>
-
-
-<div class="viewcode-block" id="to_scalar"><a class="viewcode-back" href="../../../functional/ivy/general/to_scalar/to_scalar_container.html#ivy.container.container_methods.to_scalar">[docs]</a><span class="k">def</span> <span class="nf">to_scalar</span><span class="p">(</span>
-    <span class="bp">self</span><span class="p">:</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Container</span><span class="p">,</span>
-    <span class="o">/</span><span class="p">,</span>
-    <span class="n">key_chains</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
-    <span class="n">to_apply</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
-    <span class="n">prune_unapplied</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
-    <span class="n">map_sequences</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
-<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Container</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    ivy.Container instance method variant of ivy.to_scalar. This method simply wraps</span>
-<span class="sd">    the function, and so the docstring for ivy.to_scalar also applies to this method</span>
-<span class="sd">    with minimal changes.</span>
-
-<span class="sd">    Parameters</span>
-<span class="sd">    ----------</span>
-<span class="sd">    self</span>
-<span class="sd">        input container.</span>
-<span class="sd">    key_chains</span>
-<span class="sd">        The key-chains to apply or not apply the method to. Default is None.</span>
-<span class="sd">    to_apply</span>
-<span class="sd">        If True, the method will be applied to key_chains, otherwise key_chains</span>
-<span class="sd">        will be skipped. Default is True.</span>
-<span class="sd">    prune_unapplied</span>
-<span class="sd">        Whether to prune key_chains for which the function was not applied.</span>
-<span class="sd">        Default is False.</span>
-<span class="sd">    map_sequences</span>
-<span class="sd">        Whether to also map method to sequences (lists, tuples). Default is False.</span>
-
-<span class="sd">    Returns</span>
-<span class="sd">    -------</span>
-<span class="sd">    ret</span>
-<span class="sd">        a container of scalars copying the element of the array ``self``.</span>
-
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">pass</span></div>
-
-
 <div class="viewcode-block" id="static_value_is_nan"><a class="viewcode-back" href="../../../functional/ivy/general/value_is_nan/static_value_is_nan_container.html#ivy.container.container_methods.static_value_is_nan">[docs]</a><span class="k">def</span> <span class="nf">static_value_is_nan</span><span class="p">(</span>
     <span class="n">x</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">ivy</span><span class="o">.</span><span class="n">Array</span><span class="p">,</span> <span class="n">ivy</span><span class="o">.</span><span class="n">NativeArray</span><span class="p">,</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Container</span><span class="p">],</span>
     <span class="o">/</span><span class="p">,</span>
@@ -11760,11 +11687,11 @@
 <span class="sd">    key_chains</span>
 <span class="sd">        The key-chains to apply or not apply the method to. Default is None.</span>
 <span class="sd">    to_apply</span>
-<span class="sd">        If True, the method will be applied to key_chains, otherwise key_chains</span>
-<span class="sd">        will be skipped. Default is True.</span>
+<span class="sd">        If True, the method will be applied to key_chains, otherwise key_chains will</span>
+<span class="sd">        be skipped. Default is True.</span>
 <span class="sd">    prune_unapplied</span>
-<span class="sd">        Whether to prune key_chains for which the function was not applied.</span>
-<span class="sd">        Default is False.</span>
+<span class="sd">        Whether to prune key_chains for which the function was not applied. Default</span>
+<span class="sd">        is False.</span>
 <span class="sd">    map_sequences</span>
 <span class="sd">        Whether to also map method to sequences (lists, tuples). Default is False.</span>
 
@@ -11772,7 +11699,6 @@
 <span class="sd">    -------</span>
 <span class="sd">    ret</span>
 <span class="sd">        Boolean as to whether the input value is a nan or not.</span>
-
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">pass</span></div>
 
@@ -11821,6 +11747,7 @@
 <div class="viewcode-block" id="static_to_numpy"><a class="viewcode-back" href="../../../functional/ivy/general/to_numpy/static_to_numpy_container.html#ivy.container.container_methods.static_to_numpy">[docs]</a><span class="k">def</span> <span class="nf">static_to_numpy</span><span class="p">(</span>
     <span class="n">x</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">ivy</span><span class="o">.</span><span class="n">Array</span><span class="p">,</span> <span class="n">ivy</span><span class="o">.</span><span class="n">NativeArray</span><span class="p">,</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Container</span><span class="p">],</span>
     <span class="o">/</span><span class="p">,</span>
+    <span class="o">*</span><span class="p">,</span>
     <span class="n">key_chains</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="n">to_apply</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
     <span class="n">prune_unapplied</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
@@ -11880,6 +11807,8 @@
 
 <div class="viewcode-block" id="to_numpy"><a class="viewcode-back" href="../../../functional/ivy/general/to_numpy/to_numpy_container.html#ivy.container.container_methods.to_numpy">[docs]</a><span class="k">def</span> <span class="nf">to_numpy</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">:</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Container</span><span class="p">,</span>
+    <span class="o">/</span><span class="p">,</span>
+    <span class="o">*</span><span class="p">,</span>
     <span class="n">key_chains</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
     <span class="n">to_apply</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
     <span class="n">prune_unapplied</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
@@ -11945,6 +11874,118 @@
     <span class="k">pass</span></div>
 
 
+<div class="viewcode-block" id="static_to_scalar"><a class="viewcode-back" href="../../../functional/ivy/general/to_scalar/static_to_scalar_container.html#ivy.container.container_methods.static_to_scalar">[docs]</a><span class="k">def</span> <span class="nf">static_to_scalar</span><span class="p">(</span>
+    <span class="n">x</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">ivy</span><span class="o">.</span><span class="n">Array</span><span class="p">,</span> <span class="n">ivy</span><span class="o">.</span><span class="n">NativeArray</span><span class="p">,</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Container</span><span class="p">],</span>
+    <span class="o">/</span><span class="p">,</span>
+    <span class="o">*</span><span class="p">,</span>
+    <span class="n">key_chains</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">to_apply</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="n">prune_unapplied</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="n">map_sequences</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Container</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    ivy.Container static method variant of ivy.to_scalar. This method simply wraps</span>
+<span class="sd">    the function, and so the docstring for ivy.to_scalar also applies to this method</span>
+<span class="sd">    with minimal changes.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    x</span>
+<span class="sd">        input container.</span>
+<span class="sd">    key_chains</span>
+<span class="sd">        The key-chains to apply or not apply the method to. Default is None.</span>
+<span class="sd">    to_apply</span>
+<span class="sd">        If True, the method will be applied to key_chains, otherwise key_chains</span>
+<span class="sd">        will be skipped. Default is True.</span>
+<span class="sd">    prune_unapplied</span>
+<span class="sd">        Whether to prune key_chains for which the function was not applied.</span>
+<span class="sd">        Default is False.</span>
+<span class="sd">    map_sequences</span>
+<span class="sd">        Whether to also map method to sequences (lists, tuples). Default is False.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    ret</span>
+<span class="sd">        a container of scalar values copying all the element of the container</span>
+<span class="sd">        ``x``.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    With one :code:`ivy.Container` inputs:</span>
+
+<span class="sd">    &gt;&gt;&gt; x = ivy.Container(a=ivy.array([-1]), b=ivy.array([3]))</span>
+<span class="sd">    &gt;&gt;&gt; y = ivy.Container.static_to_scalar(x)</span>
+<span class="sd">    &gt;&gt;&gt; print(y)</span>
+<span class="sd">    {</span>
+<span class="sd">        a: -1,</span>
+<span class="sd">        b: 3</span>
+<span class="sd">    }</span>
+
+<span class="sd">    &gt;&gt;&gt; print(ivy.is_int_dtype(y))</span>
+<span class="sd">    {</span>
+<span class="sd">        a: true,</span>
+<span class="sd">        b: true</span>
+<span class="sd">    }</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">pass</span></div>
+
+
+<div class="viewcode-block" id="to_scalar"><a class="viewcode-back" href="../../../functional/ivy/general/to_scalar/to_scalar_container.html#ivy.container.container_methods.to_scalar">[docs]</a><span class="k">def</span> <span class="nf">to_scalar</span><span class="p">(</span>
+    <span class="bp">self</span><span class="p">:</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Container</span><span class="p">,</span>
+    <span class="o">/</span><span class="p">,</span>
+    <span class="o">*</span><span class="p">,</span>
+    <span class="n">key_chains</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">to_apply</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="n">prune_unapplied</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="n">map_sequences</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Container</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    ivy.Container instance method variant of ivy.to_scalar. This method simply wraps</span>
+<span class="sd">    the function, and so the docstring for ivy.to_scalar also applies to this method</span>
+<span class="sd">    with minimal changes.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    self</span>
+<span class="sd">        input container.</span>
+<span class="sd">    key_chains</span>
+<span class="sd">        The key-chains to apply or not apply the method to. Default is None.</span>
+<span class="sd">    to_apply</span>
+<span class="sd">        If True, the method will be applied to key_chains, otherwise key_chains</span>
+<span class="sd">        will be skipped. Default is True.</span>
+<span class="sd">    prune_unapplied</span>
+<span class="sd">        Whether to prune key_chains for which the function was not applied.</span>
+<span class="sd">        Default is False.</span>
+<span class="sd">    map_sequences</span>
+<span class="sd">        Whether to also map method to sequences (lists, tuples). Default is False.</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    ret</span>
+<span class="sd">        a container of scalar values copying all the element of the container</span>
+<span class="sd">        ``self``.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    With one :code:`ivy.Container` instances:</span>
+
+
+<span class="sd">    &gt;&gt;&gt; x = ivy.Container(a=ivy.array([1]), b=ivy.array([0]),\</span>
+<span class="sd">                        c=ivy.array([-1]))</span>
+<span class="sd">    &gt;&gt;&gt; y = x.to_scalar()</span>
+<span class="sd">    &gt;&gt;&gt; print(y)</span>
+<span class="sd">    {</span>
+<span class="sd">        a: 1,</span>
+<span class="sd">        b: 0,</span>
+<span class="sd">        c: -1</span>
+<span class="sd">    }</span>
+
+<span class="sd">    </span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">pass</span></div>
+
+
 <div class="viewcode-block" id="static_to_list"><a class="viewcode-back" href="../../../functional/ivy/general/to_list/static_to_list_container.html#ivy.container.container_methods.static_to_list">[docs]</a><span class="k">def</span> <span class="nf">static_to_list</span><span class="p">(</span>
     <span class="n">x</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="n">ivy</span><span class="o">.</span><span class="n">Array</span><span class="p">,</span> <span class="n">ivy</span><span class="o">.</span><span class="n">NativeArray</span><span class="p">,</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Container</span><span class="p">],</span>
     <span class="o">/</span><span class="p">,</span>
@@ -11978,6 +12019,17 @@
 <span class="sd">    -------</span>
 <span class="sd">    ret</span>
 <span class="sd">        A list representation of the input array ``x``.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    With one :code:`ivy.Container` inputs:</span>
+
+
+<span class="sd">    &gt;&gt;&gt; x = ivy.Container(a=ivy.array([0, 1, 2]))</span>
+<span class="sd">    &gt;&gt;&gt; y = ivy.Container.static_to_list(x)</span>
+<span class="sd">    &gt;&gt;&gt; print(y)</span>
+<span class="sd">    {a:[0,1,2]}</span>
+
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">pass</span></div>
 
@@ -12015,6 +12067,17 @@
 <span class="sd">    -------</span>
 <span class="sd">    ret</span>
 <span class="sd">        A list representation of the input array ``x``.</span>
+
+<span class="sd">    Examples</span>
+<span class="sd">    --------</span>
+<span class="sd">    With one :code:`ivy.Container` instances:</span>
+
+
+<span class="sd">    &gt;&gt;&gt; x = ivy.Container(a=ivy.array([0, 1, 2]))</span>
+<span class="sd">    &gt;&gt;&gt; y = x.to_list()</span>
+<span class="sd">    &gt;&gt;&gt; print(y)</span>
+<span class="sd">    {a:[0,1,2]}</span>
+
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">pass</span></div>
 
@@ -19516,6 +19579,22 @@
 
 <div class="viewcode-block" id="prod"><a class="viewcode-back" href="../../../functional/ivy/statistical/prod/prod_container.html#ivy.container.container_methods.prod">[docs]</a><span class="k">def</span> <span class="nf">prod</span><span class="p">(</span>
     <span class="bp">self</span><span class="p">:</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Container</span><span class="p">,</span>
+    <span class="o">/</span><span class="p">,</span>
+    <span class="o">*</span><span class="p">,</span>
+    <span class="n">axis</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">dtype</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">ivy</span><span class="o">.</span><span class="n">Dtype</span><span class="p">,</span> <span class="n">ivy</span><span class="o">.</span><span class="n">NativeDtype</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">keepdims</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="n">key_chains</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">Union</span><span class="p">[</span><span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">],</span> <span class="n">Dict</span><span class="p">[</span><span class="nb">str</span><span class="p">,</span> <span class="nb">str</span><span class="p">]]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+    <span class="n">to_apply</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">True</span><span class="p">,</span>
+    <span class="n">prune_unapplied</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="n">map_sequences</span><span class="p">:</span> <span class="nb">bool</span> <span class="o">=</span> <span class="kc">False</span><span class="p">,</span>
+    <span class="n">out</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="n">ivy</span><span class="o">.</span><span class="n">Container</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
+<span class="p">)</span> <span class="o">-&gt;</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Container</span><span class="p">:</span>
+    <span class="k">pass</span></div>
+
+
+<div class="viewcode-block" id="static_sum"><a class="viewcode-back" href="../../../functional/ivy/statistical/sum/static_sum_container.html#ivy.container.container_methods.static_sum">[docs]</a><span class="k">def</span> <span class="nf">static_sum</span><span class="p">(</span>
+    <span class="n">x</span><span class="p">:</span> <span class="n">ivy</span><span class="o">.</span><span class="n">Container</span><span class="p">,</span>
     <span class="o">/</span><span class="p">,</span>
     <span class="o">*</span><span class="p">,</span>
     <span class="n">axis</span><span class="p">:</span> <span class="n">Union</span><span class="p">[</span><span class="nb">int</span><span class="p">,</span> <span class="n">Tuple</span><span class="p">[</span><span class="nb">int</span><span class="p">]]</span> <span class="o">=</span> <span class="kc">None</span><span class="p">,</span>
