@@ -111,7 +111,6 @@
 <li class="toctree-l2"><a class="reference internal" href="not_equal.html">not_equal</a></li>
 <li class="toctree-l2"><a class="reference internal" href="positive.html">positive</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pow.html">pow</a></li>
-<li class="toctree-l2"><a class="reference internal" href="reciprocal.html">reciprocal</a></li>
 <li class="toctree-l2"><a class="reference internal" href="remainder.html">remainder</a></li>
 <li class="toctree-l2"><a class="reference internal" href="round.html">round</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sign.html">sign</a></li>
@@ -124,9 +123,11 @@
 <li class="toctree-l2"><a class="reference internal" href="tanh.html">tanh</a></li>
 <li class="toctree-l2"><a class="reference internal" href="trunc.html">trunc</a></li>
 <li class="toctree-l2"><a class="reference internal" href="erf.html">erf</a></li>
-<li class="toctree-l2"><a class="reference internal" href="floormod.html">floormod</a></li>
 <li class="toctree-l2"><a class="reference internal" href="maximum.html">maximum</a></li>
 <li class="toctree-l2"><a class="reference internal" href="minimum.html">minimum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="reciprocal.html">reciprocal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="deg2rad.html">deg2rad</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rad2deg.html">rad2deg</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../extensions.html">Extensions</a></li>
@@ -249,7 +250,7 @@ in the standard.</p>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">y</span> <span class="o">=</span> <span class="n">ivy</span><span class="o">.</span><span class="n">array</span><span class="p">([[</span><span class="mf">8.4</span><span class="p">],</span> <span class="p">[</span><span class="mf">2.5</span><span class="p">],</span> <span class="p">[</span><span class="mf">1.6</span><span class="p">]])</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="n">ivy</span><span class="o">.</span><span class="n">less_equal</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">out</span><span class="o">=</span><span class="n">x</span><span class="p">)</span>
 <span class="gp">&gt;&gt;&gt; </span><span class="nb">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
-<span class="go">ivy.array([[[1.],[0.],[1.]]])</span>
+<span class="go">ivy.array([[[True],[False],[True]]])</span>
 </pre></div>
 </div>
 <p>With <code class="code docutils literal notranslate"><span class="pre">ivy.Container</span></code> input:</p>
