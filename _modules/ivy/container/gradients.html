@@ -76,19 +76,19 @@
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Data Classes</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../data_classes/container.html">Container</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../data_classes/array.html">Array</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../data_classes/container.html">Container</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Framework Classes</span></p>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../stateful/initializers.html">Initializers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../stateful/converters.html">Converters</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../stateful/optimizers.html">Optimizers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../stateful/module.html">Module</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../stateful/layers.html">Layers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../stateful/norms.html">Norms</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../stateful/activations.html">Activations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../stateful/module.html">Module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../stateful/converters.html">Converters</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../stateful/layers.html">Layers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../stateful/initializers.html">Initializers</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../stateful/sequential.html">Sequential</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../stateful/activations.html">Activations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../stateful/optimizers.html">Optimizers</a></li>
 </ul>
 <p class="caption" role="heading"><span class="caption-text">Docs</span></p>
 <ul>
@@ -519,8 +519,8 @@
 <span class="sd">        map_sequences</span>
 <span class="sd">            Whether to also map method to sequences (lists, tuples). Default is False.</span>
 <span class="sd">        preserve_type</span>
-<span class="sd">            Whether to preserve the input type (ivy.Variable or ivy.Array),</span>
-<span class="sd">            otherwise an array is always returned. Default is True.</span>
+<span class="sd">            Whether to preserve gradient computation on ivy.Array instances. Default is</span>
+<span class="sd">            True.</span>
 <span class="sd">        out</span>
 <span class="sd">            optional output array, for writing the result to. It must have a shape</span>
 <span class="sd">            that the inputs broadcast to.</span>
@@ -597,8 +597,8 @@
 <span class="sd">        map_sequences</span>
 <span class="sd">            Whether to also map method to sequences (lists, tuples). Default is False.</span>
 <span class="sd">        preserve_type</span>
-<span class="sd">            Whether to preserve the input type (ivy.Variable or ivy.Array),</span>
-<span class="sd">            otherwise an array is always returned. Default is True.</span>
+<span class="sd">            Whether to preserve gradient computation on ivy.Array instances. Default is</span>
+<span class="sd">            True.</span>
 <span class="sd">        out</span>
 <span class="sd">            optional output array, for writing the result to. It must have a shape</span>
 <span class="sd">            that the inputs broadcast to.</span>
